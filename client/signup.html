@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Create Account
+        </title>
+    </head>
+
+    <body>
+        <h1>Create an Account</h1>
+        <p>Already have an Account? <a href="./login.html">Log-in</a></p>
+
+        <div>
+            <b>First Name: </b><input id="fname"/>
+            <br>
+            <b>Last Name: </b><input id="lname"/>
+            <br>
+            <b>Username: </b><input id="username"/>
+            <br>
+            <b>Password: </b><input id="password"/>
+            <br>
+            <b>Email: </b><input id="email"/>
+            <br>
+
+            <b>Account Type</b>
+            <select id="accountType">
+                <option value="player">Player</option>
+                <option value="gameMaster">Game Master</option>
+                <option value="worldBuilder">World Builder</option>
+            </select>
+            <br>
+            <div id="require_code"></div>
+            <br>
+            <button>Create Account</button>
+        </div>
+    </body>
+</html>

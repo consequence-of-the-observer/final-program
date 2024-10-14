@@ -5,13 +5,21 @@ function registerServerInfo() {
         server_code: document.getElementById("server_code").value
     };
 
-    let save_server_info = document.getElementById("save_server").value;
+    //let save_server_info = document.getElementById("save_server").value;
 
-    console.log(save_server_info);
+    localStorage.setItem("server_"+data.server_name, JSON.stringify(data));
+    addToServerList(data.server_name);
+    createServerList();
+}
 
-    // if(save_server_info === off) {
-    //     sessionStorage.setItem("server_"+data.server_name, JSON.stringify(data));
-    // }else {
-    //     localStorage.setItem("server_"+data.server_name, JSON.stringify(data));
-    // }
+function addToServerList(name) {
+    let val = JSON.parse(localStorage.getItem("server_list"));
+
+    if(val === null) {
+        val = [name];
+    }else {
+        val.push(name);
+    }
+
+    localStorage.setItem("server_list", JSON.stringify(val));
 }
